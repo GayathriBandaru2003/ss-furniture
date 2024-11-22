@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <style>
+        /* Additional CSS for modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1; 
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto; 
+            background-color: rgba(0,0,0,0.4); 
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+        }
+        /* Close button */
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <button id="openModalBtn">Open Modal</button>
+
+    <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <!-- Your existing HTML content goes here -->
+            <!-- Note: Add an ID to your section for easier access -->
+            <section id="modalContent">
+                <div class="first-level">
+                    <h1>Sofa Single</h1>
+                </div>
+                <div class="second-leve1">
+                    <div class="left-side">
+                        <div class="single-image">
+                            <img src="/static/images/more-details-big.png" alt="">
+                        </div>
+                    </div>
+                    <div class="right-side">
+                        <p>Polo Ralph Lauren</p>
+                        <h1 class="single-sofa" >Single Sofa For Home</h1>
+                        <p class="Description">DESCRIPTION</p>
+                        <p>We've reinterpreted our iconic mesh fabric with premium cotton yarn to create this lightweight jumper.</p>
+                        <p>Honey Brown Hthr</p>
+                        <div class="colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <circle cx="10" cy="10" r="9.5" fill="#A18671" stroke="#2F2F37"/>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <circle cx="10" cy="10" r="9.5" fill="#8DA99B" stroke="#2F2F37"/>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <circle cx="10" cy="10" r="9.5" fill="#EBD8AC" stroke="#2F2F37"/>
+                            </svg>
+                        </div>
+                        <div class="stars-of-more-details">
+                            <svg width="133" height="21" viewBox="0 0 133 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.5 0L12.8574 7.25532H20.4861L14.3143 11.7394L16.6717 18.9947L10.5 14.5106L4.32825 18.9947L6.68565 11.7394L0.513906 7.25532H8.1426L10.5 0Z" fill="#FFA800"/>
+                                <path d="M38.5 0L40.8574 7.25532H48.4861L42.3143 11.7394L44.6717 18.9947L38.5 14.5106L32.3283 18.9947L34.6857 11.7394L28.5139 7.25532H36.1426L38.5 0Z" fill="#FFA800"/>
+                                <path d="M66.5 0L68.8574 7.25532H76.4861L70.3143 11.7394L72.6717 18.9947L66.5 14.5106L60.3283 18.9947L62.6857 11.7394L56.5139 7.25532H64.1426L66.5 0Z" fill="#FFA800"/>
+                                <path d="M94.5 0L96.8574 7.25532H104.486L98.3143 11.7394L100.672 18.9947L94.5 14.5106L88.3283 18.9947L90.6857 11.7394L84.5139 7.25532H92.1426L94.5 0Z" fill="#FFA800"/>
+                                <path d="M122.5 0L124.857 7.25532H132.486L126.314 11.7394L128.672 18.9947L122.5 14.5106L116.328 18.9947L118.686 11.7394L112.514 7.25532H120.143L122.5 0Z" fill="url(#paint0_linear_430_236)" fill-opacity="0.43"/>
+                                <defs>
+                                <linearGradient id="paint0_linear_430_236" x1="133" y1="10.5" x2="112" y2="10.5" gradientUnits="userSpaceOnUse">
+                                <stop offset="0.358434" stop-color="#C2C2C2"/>
+                                <stop offset="0.524222" stop-color="#FFB800"/>
+                                <stop offset="0.669286" stop-color="#FFA800"/>
+                                </linearGradient>
+                                </defs>
+                            </svg>
+                            <h1>4.5</h1>
+                            <div class="buy-now">
+                                <button class="more-details-of-buynow">
+                                    <span class="transition"></span>
+                                    <span class="gradient"></span>
+                                    <span class="label">Buy Now</span>
+                                </button>
+        
+                            </div>
+                                
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Close button -->
+            <span class="close">&times;</span>
+        </div>
+    </div>
+
+    <script>
+        var modal = document.getElementById("myModal");
+        var btn = document.getElementById("openModalBtn");
+        var span = document.getElementsByClassName("close")[0];
+ 
+        btn.onclick = function() {
+            modal.style.display = "block";
+        }
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
